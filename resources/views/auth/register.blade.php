@@ -1,5 +1,6 @@
 <x-layout>
     <form method="POST" action="{{ route('register.store') }}" class="flex flex-col">
+        @csrf
         <label>
             <span>Fistname</span>
             <input type="text" placeholder="Alex" name="firstname">
