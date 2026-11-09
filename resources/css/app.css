@@ -1,9 +1,43 @@
 @import 'tailwindcss';
-
+@import '@fontsource-variable/source-serif-4';
+@import '@fontsource-variable/source-sans-3';
+@import '@fontsource-variable/source-code-pro';
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
+
+:root {
+    --background: #f8f7fc;
+    --surface: #fff;
+    --primaty: #6f5bd3;
+}
 
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --font-heading: 'Source Serif 4 Variable', serif;
+    --font-body: 'Source Sans 3 Variable', sans-serif;
+    --font-mono: 'Source Code Pro Variable', ui-monospace, monospace;
+
+    --color-background: #f8f7fc;
+    --color-surface: #fff;
+    --color-surface-2: #f0eef8;
+    --color-text: #24243a;
+    --color-muted: #696a80;
+    --color-primary: #6f5bd3;
+    --color-primary-hover: #5947bb;
+    --color-primary-soft: #eae6ff;
+    --color-mint: #bcebd8;
+    --color-mint-text: #176547;
+    --color-sky: #c8e7fa;
+    --color-sky-text: #245d7e;
+    --color-peach: #ffd7ca;
+    --color-peach-text: #824838;
+    --color-border: #e4e2ef;
+    --color-success: #247a58;
+    --color-warning: #8a5b12;
+    --color-danger: #b33d52;
+    --color-danger-soft: #fdecef;
+    --shadow: 0 1px 2px rgba(40, 32, 75, .03), 0 8px 24px rgba(40, 32, 75, .04);
+    --shadow-lg: 0 20px 50px rgba(35, 29, 65, .15);
 }

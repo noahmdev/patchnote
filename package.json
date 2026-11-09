@@ -4,10 +4,13 @@
     "type": "module",
     "scripts": {
         "build": "vite build",
-        "dev": "vite"
+        "dev": "vite",
+        "format:blade": "blade-formatter --write \"resources/views/**/*.blade.php\"",
+        "format:blade:check": "blade-formatter --check \"resources/views/**/*.blade.php\""
     },
     "devDependencies": {
         "@tailwindcss/vite": "^4.3.3",
+        "blade-formatter": "1.19.0",
         "concurrently": "^10.0.3",
         "laravel-vite-plugin": "^3.1",
         "tailwindcss": "^4.3.3",
@@ -15,5 +18,10 @@
     },
     "optionalDependencies": {
         "@laravel/multiplex": "^0.4.1"
+    },
+    "dependencies": {
+        "@fontsource-variable/source-code-pro": "^5.3.1",
+        "@fontsource-variable/source-sans-3": "^5.3.1",
+        "@fontsource-variable/source-serif-4": "^5.3.1"
     }
 }
