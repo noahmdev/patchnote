@@ -214,7 +214,7 @@
 
                 <p class="text-muted text-center mt-5 text-[13px]">
                     Already have a account?
-                    <a href="#" class="text-primary font-semibold">
+                    <a href="{{  route('login') }}" class="text-primary font-semibold">
                         Sign in
                     </a>
                 </p>
