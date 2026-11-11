@@ -130,26 +130,27 @@
                 </p>
 
 
-                <form method="POST" action="{{ route('register.store') }}" class="flex flex-col mt-6.75 gap-3.75">
+                <form method="POST" action="{{ route('login.store') }}" class="flex flex-col mt-6.75 gap-3.75">
                     @csrf
                     <label class="flex flex-col gap-1.75 font-semibold text-xs">
                         <span>Email address</span>
                         <div
-                            class="border border-border bg-surface h-10.75 text-muted rounded-[9px] px-3 flex items-center gap-2.25 transition-[border-color,box-shadow] duration-150 focus-within:border-primary-hover focus-within:shadow-[0_2px_10px_rgba(151,133,255,0.30)]">
+                            class="border @error('email') shadow-[0_0_0_3px_color-mix(in_srgb,var(--color-danger)_10%,transparent)] border-danger text-danger @else border-border text-muted @enderror bg-surface h-10.75 rounded-[9px] px-3 flex items-center gap-2.25 transition-[border-color,box-shadow] duration-150 focus-within:border-primary-hover focus-within:shadow-[0_2px_10px_rgba(151,133,255,0.30)]">
                             <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="3" y="5" width="18" height="14" rx="2"></rect>
                                 <path d="m3 7 9 6 9-6"></path>
                             </svg>
-                            <input type="email" placeholder="you@example.com" name="email"
+                            <input type="email" placeholder="you@example.com" name="email" value="{{ old('email') }}"
                                 class="w-full outline-none text-black" autocomplete="off">
                         </div>
                     </label>
 
+
                     <label class="flex flex-col gap-1.75 font-semibold text-xs">
                         <span>Password</span>
                         <div
-                            class="border border-border bg-surface h-10.75 text-muted rounded-[9px] px-3 flex items-center gap-2.25 transition-[border-color,box-shadow] duration-150 focus-within:border-primary-hover focus-within:shadow-[0_2px_10px_rgba(151,133,255,0.30)]">
+                            class="border @error('email') shadow-[0_0_0_3px_color-mix(in_srgb,var(--color-danger)_10%,transparent)] border-danger text-danger @else border-border text-muted @enderror  bg-surface h-10.75 rounded-[9px] px-3 flex items-center gap-2.25 transition-[border-color,box-shadow] duration-150 focus-within:border-primary-hover focus-within:shadow-[0_2px_10px_rgba(151,133,255,0.30)]">
                             <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="4" y="10" width="16" height="11" rx="2"></rect>
@@ -159,6 +160,10 @@
                                 class="w-full outline-none text-black " autocomplete="off">
                         </div>
                     </label>
+
+                    @error('email')
+                        <p class="text-[11px] bg-danger-soft text-danger rounded-lg border border-[color-mix(in_srgb,var(--color-danger)_25%,transparent)] py-2.25 px-2.75" role="alert">{{ $message }}</p>
+                    @enderror
 
                     <button type="submit"
                         class="mt-0.5 bg-primary flex items-center justify-center min-h-10.75 w-full text-white cursor-pointer rounded-[9px] gap-1.75 text-sm font-semibold hover:bg-primary-hover transition-all hover:-translate-y-px">
