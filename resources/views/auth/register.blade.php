@@ -135,7 +135,7 @@
                     <label class="flex flex-col gap-1.75 font-semibold text-xs">
                         <span>Firstname</span>
                         <div
-                            class="border border-border bg-surface h-10.75 text-muted rounded-[9px] px-3 flex items-center gap-2.25 transition-[border-color,box-shadow] duration-150 focus-within:border-primary-hover focus-within:shadow-[0_2px_10px_rgba(151,133,255,0.30)]">
+                            class="border @error('firstname') shadow-[0_0_0_3px_color-mix(in_srgb,var(--color-danger)_10%,transparent)] border-danger text-danger @else border-border text-muted @enderror  bg-surface h-10.75 rounded-[9px] px-3 flex items-center gap-2.25 transition-[border-color,box-shadow] duration-150 focus-within:border-primary-hover focus-within:shadow-[0_2px_10px_rgba(151,133,255,0.30)]">
                             <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                                 <circle cx="12" cy="8" r="4"></circle>
@@ -144,12 +144,16 @@
                             <input type="text" placeholder="Alex" name="firstname"
                                 class="w-full outline-none text-black" autocomplete="off">
                         </div>
+
+                        @error('firstname')
+                            <p class="text-[11px] bg-danger-soft text-danger rounded-lg border border-[color-mix(in_srgb,var(--color-danger)_25%,transparent)^> py-2.25 px-2.75" role="alert">{{ $message }}</p>
+                        @enderror
                     </label>
 
                     <label class="flex flex-col gap-1.75 font-semibold text-xs">
                         <span>Lastname</span>
                         <div
-                            class="border border-border bg-surface h-10.75 text-muted rounded-[9px] px-3 flex items-center gap-2.25 transition-[border-color,box-shadow] duration-150 focus-within:border-primary-hover focus-within:shadow-[0_2px_10px_rgba(151,133,255,0.30)]">
+                            class="border @error('lastname') shadow-[0_0_0_3px_color-mix(in_srgb,var(--color-danger)_10%,transparent)] border-danger text-danger @else border-border text-muted @enderror  bg-surface h-10.75 rounded-[9px] px-3 flex items-center gap-2.25 transition-[border-color,box-shadow] duration-150 focus-within:border-primary-hover focus-within:shadow-[0_2px_10px_rgba(151,133,255,0.30)]">
                             <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                                 <circle cx="12" cy="8" r="4"></circle>
@@ -158,12 +162,16 @@
                             <input type="text" placeholder="Kim" name="lastname" class="w-full outline-none text-black"
                                 autocomplete="off">
                         </div>
+
+                        @error('lastname')
+                            <p class="text-[11px] bg-danger-soft text-danger rounded-lg border border-[color-mix(in_srgb,var(--color-danger)_25%,transparent)^> py-2.25 px-2.75" role="alert">{{ $message }}</p>
+                        @enderror
                     </label>
 
                     <label class="flex flex-col gap-1.75 font-semibold text-xs">
                         <span>Email address</span>
                         <div
-                            class="border border-border bg-surface h-10.75 text-muted rounded-[9px] px-3 flex items-center gap-2.25 transition-[border-color,box-shadow] duration-150 focus-within:border-primary-hover focus-within:shadow-[0_2px_10px_rgba(151,133,255,0.30)]">
+                            class="border @error('email') shadow-[0_0_0_3px_color-mix(in_srgb,var(--color-danger)_10%,transparent)] border-danger text-danger @else border-border text-muted @enderror  bg-surface h-10.75 rounded-[9px] px-3 flex items-center gap-2.25 transition-[border-color,box-shadow] duration-150 focus-within:border-primary-hover focus-within:shadow-[0_2px_10px_rgba(151,133,255,0.30)]">
                             <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="3" y="5" width="18" height="14" rx="2"></rect>
@@ -172,12 +180,16 @@
                             <input type="email" placeholder="you@example.com" name="email"
                                 class="w-full outline-none text-black" autocomplete="off">
                         </div>
+
+                        @error('email')
+                            <p class="text-[11px] bg-danger-soft text-danger rounded-lg border border-[color-mix(in_srgb,var(--color-danger)_25%,transparent)^> py-2.25 px-2.75" role="alert">{{ $message }}</p>
+                        @enderror
                     </label>
 
                     <label class="flex flex-col gap-1.75 font-semibold text-xs">
                         <span>Password</span>
                         <div
-                            class="border border-border bg-surface h-10.75 text-muted rounded-[9px] px-3 flex items-center gap-2.25 transition-[border-color,box-shadow] duration-150 focus-within:border-primary-hover focus-within:shadow-[0_2px_10px_rgba(151,133,255,0.30)]">
+                            class="border @error('password') shadow-[0_0_0_3px_color-mix(in_srgb,var(--color-danger)_10%,transparent)] border-danger text-danger @else border-border text-muted @enderror  bg-surface h-10.75 rounded-[9px] px-3 flex items-center gap-2.25 transition-[border-color,box-shadow] duration-150 focus-within:border-primary-hover focus-within:shadow-[0_2px_10px_rgba(151,133,255,0.30)]">
                             <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="4" y="10" width="16" height="11" rx="2"></rect>
@@ -186,12 +198,16 @@
                             <input type="password" placeholder="At least 8 characters" name="password"
                                 class="w-full outline-none text-black " autocomplete="off">
                         </div>
+
+                        @error('password')
+                            <p class="text-[11px] bg-danger-soft text-danger rounded-lg border border-[color-mix(in_srgb,var(--color-danger)_25%,transparent)^> py-2.25 px-2.75" role="alert">{{ $message }}</p>
+                        @enderror
                     </label>
 
                     <label class="flex flex-col gap-1.75 font-semibold text-xs">
                         <span>Confirm password</span>
                         <div
-                            class="border border-border bg-surface h-10.75 text-muted rounded-[9px] px-3 flex items-center gap-2.25 transition-[border-color,box-shadow] duration-150 focus-within:border-primary-hover focus-within:shadow-[0_2px_10px_rgba(151,133,255,0.30)]">
+                            class="border @error('password') shadow-[0_0_0_3px_color-mix(in_srgb,var(--color-danger)_10%,transparent)] border-danger text-danger @else border-border text-muted @enderror  bg-surface h-10.75 rounded-[9px] px-3 flex items-center gap-2.25 transition-[border-color,box-shadow] duration-150 focus-within:border-primary-hover focus-within:shadow-[0_2px_10px_rgba(151,133,255,0.30)]">
                             <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none"
                                 stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="4" y="10" width="16" height="11" rx="2"></rect>
@@ -200,6 +216,10 @@
                             <input type="password" placeholder="Repeat your password" name="password_confirmation"
                                 class="w-full outline-none text-black" autocomplete="off">
                         </div>
+
+                        @error('password')
+                            <p class="text-[11px] bg-danger-soft text-danger rounded-lg border border-[color-mix(in_srgb,var(--color-danger)_25%,transparent)^> py-2.25 px-2.75" role="alert">{{ $message }}</p>
+                        @enderror
                     </label>
 
                     <button type="submit"

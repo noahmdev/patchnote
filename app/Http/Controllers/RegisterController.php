@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\RegisterRequest;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use SortDirection;
 
 class RegisterController extends Controller
 {
@@ -24,9 +25,9 @@ class RegisterController extends Controller
         $validated = $request->validated();
 
         $user = User::create([
-            'firstname' => $validated['firstname'],
-            'lastname' => $validated['lastname'],
-            'email' => $validated['email'],
+            'firstname' => strtolower($validated['firstname']),
+            'lastname' => strtolower($validated['lastname']),
+            'email' => strtolower($validated['email']),
             'password' => $validated['password'],
         ]);
 
