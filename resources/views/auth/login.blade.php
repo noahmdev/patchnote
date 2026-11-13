@@ -72,7 +72,7 @@
                             role="alert">{{ $message }}</p>
                     @enderror
 
-                    <button type="submit"
+                    <button type="submit" data-test="login-btn"
                         class="mt-0.5 bg-primary flex items-center justify-center min-h-10.75 w-full text-white cursor-pointer rounded-[9px] gap-1.75 text-sm font-semibold hover:bg-primary-hover transition-all hover:-translate-y-px">
                         Sign in
                         <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none"
@@ -84,7 +84,8 @@
 
                 <p class="text-muted text-center mt-5 text-[13px]">
                     New to Patchnote?
-                    <a href="{{ route('register.create') }}" class="text-primary font-semibold">
+                    <a data-test="register-link" href="{{ route('register.create') }}"
+                        class="text-primary font-semibold">
                         Create an account
                     </a>
                 </p>

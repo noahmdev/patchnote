@@ -132,7 +132,7 @@
                         @enderror
                     </label>
 
-                    <button type="submit"
+                    <button type="submit" data-test="registration-submit"
                         class="mt-0.5 bg-primary flex items-center justify-center min-h-10.75 w-full text-white cursor-pointer rounded-[9px] gap-1.75 text-sm font-semibold hover:bg-primary-hover transition-all hover:-translate-y-px">
                         Create account
                         <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none"

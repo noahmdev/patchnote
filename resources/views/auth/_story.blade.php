@@ -55,8 +55,8 @@
 
             <div class="pt-4.5 pb-3.75 grid grid-cols-[38px_1fr_auto] items-center gap-2.75">
                 <div class="bg-mint text-mint-text rounded-[10px] size-9.75 flex items-center justify-center">
-                    <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M14 4h6v6M20 4l-8 8"></path>
                         <path d="M19 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"></path>
                     </svg>
@@ -69,8 +69,8 @@
 
                 <button
                     class="inline-flex items-center w-fit h-6 gap-1.25 rounded-xl px-2 text-[11px] font-bold whitespace-nowrap bg-mint text-mint-text">
-                    <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                         <path d="m5 12 4 4L19 6"></path>
                     </svg>
                     Approved
